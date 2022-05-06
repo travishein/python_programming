@@ -15,7 +15,8 @@ Software design in a nutshell:
 * [f strings](https://realpython.com/python-f-strings/)
 * [Requests module](https://docs.python-requests.org/en/latest/)
 * [JSON module](https://docs.python-requests.org/en/latest/)
-* [Jinga2 templates]
+* [Jinga2 templates](https://realpython.com/primer-on-jinja-templating)
+* [strftime](https://www.programiz.com/python-programming/datetime/strftime)
 
 ### IDE and Developer Tools
 
