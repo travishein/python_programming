@@ -11,6 +11,15 @@ In windows powershell:
    flask run
  
 
+In Windows CMD:
+    
+    set FLASK_APP=server
+    flask run
+    
+In Bash shell:
+    
+    export FLASK_APP="server"
+    flask run
 """
 
 from flask import Flask, render_template
