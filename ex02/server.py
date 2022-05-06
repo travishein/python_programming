@@ -25,6 +25,30 @@ In Bash shell:
 from flask import Flask, render_template
 from jinja2 import Template
 
+
+
+# For the sportstats.io stuff
+import datetime
+import requests
+import json
+import os
+
+
+def read_games_today():
+    """
+    Return: the JSON data from sportsdata.io hockey games by date API
+    """
+    api_host = "https://api.sportsdata.io/v3/nhl"
+    api_key = os.getenv('sportsdata_api_key')
+    print(f"api_key: {api_key}")
+    api_path = "scores/json/GamesByDate"
+    today = datetime.date.today()    
+    url = f"{api_host}/{api_path}/{today}"
+    headers = {'Ocp-Apim-Subscription-Key': api_key}
+    r = requests.get(url, headers=headers)
+    json_data = r.json()
+    return json_data
+
 app = Flask(__name__)
 
 @app.route("/")
