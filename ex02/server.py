@@ -53,5 +53,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome_page():
+    now = datetime.datetime.now()
+    today =  now.strftime("%A, %b %d, %Y %H:%M:%S")
 
-    return render_template('main.html', a_variable = 'weeee')
+    return render_template('main.html', today = today)
