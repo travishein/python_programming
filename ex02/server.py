@@ -57,3 +57,14 @@ def welcome_page():
     today =  now.strftime("%A, %b %d, %Y %H:%M:%S")
 
     return render_template('main.html', today = today)
+
+
+@app.route("/games_today")
+def show_games_today():
+    
+    now = datetime.datetime.now()
+    today =  now.strftime("%A, %b %d, %Y %H:%M:%S")
+    data=read_games_today()
+    #data=[]
+    
+    return render_template('list_games.html', today=today, data=data)

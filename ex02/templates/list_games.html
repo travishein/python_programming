@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gemes Today</title>
+</head>
+
+<body>
+
+    <p><a href="/">Home</a> &gt; Games Today</p>
+
+
+    <p>Today is {{today}}</p>
+    
+    {% if data|length > 0 %}
+    <h1>Hockey Games Today</h1>
+    
+    <table border="1">
+    
+    <tr>
+        <th>Game ID</th>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Time</th>
+    </tr>
+    {% for game in data %}
+    <tr>
+    <td>{{game['GameID']}}</td>
+    <td>{{game['HomeTeam']}}</td>
+    <td>{{game['AwayTeam']}}</td>
+    <td>{{game['DateTime'][11:]}}</td>
+    </tr>
+    
+    {% endfor %}
+    </table>
+    
+    {% else %}
+    <h1>No Games Today</h1>
+    {% endif %}
+</body>
+
+</html>
