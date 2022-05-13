@@ -72,7 +72,7 @@ def read_games():
         game_id =   game['GameID']
         away_team = game['AwayTeam']
         home_team = game['HomeTeam']
-        start_time = game['DateTime'][11:]
+        start_time = game['DateTime']
         print (f'GAME: {game_id}   away: {away_team:<5} home: {home_team:<5} starts {start_time}' )
 
 

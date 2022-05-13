@@ -8,6 +8,7 @@ Setting Up
 In windows powershell:
     
     $env:FLASK_APP = "server"
+    $Env:sportsdata_api_key = "<your-key>"
    flask run
  
 
